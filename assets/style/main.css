@@ -1,0 +1,52 @@
+header section {
+    display: flex;
+    background: #000;
+    height: 425px;
+}
+
+.img {
+    width: 70%;
+    margin: auto;
+    height: 310px;
+    border-radius: 25%;
+    background: url(../img/Logo/logo2.png) center/cover;
+}
+
+nav {
+    background: #3D3D3D;
+}
+
+.navbar-nav li {
+    display: inline-block; /* Afficher les éléments de la liste en ligne */
+    margin-right: 10px; /* Espacement entre les éléments */
+}
+
+.custom-navbar-toggler {
+    border: none; /* Supprimer la bordure */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 8px 12px; /* Espacement interne (haut/bas gauche/droite) */
+    color: white; /* Couleur du texte */
+    font-size: 18px; /* Taille de la police */
+}
+
+/* Style personnalisé pour l'icône de basculement */
+.custom-navbar-toggler-icon {
+    color: white; /* Couleur de l'icône */
+    font-size: 24px; /* Taille de l'icône */
+}
+
+/* Style au survol */
+.custom-navbar-toggler:hover {
+   
+}
+
+form .form-control { 
+    margin: auto;
+    border: none;
+    background: #651616;
+    border-radius: 50px;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 0;
+}

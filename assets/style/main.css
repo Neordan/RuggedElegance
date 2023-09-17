@@ -8,7 +8,7 @@ header section {
     width: 70%;
     margin: auto;
     height: 310px;
-    border-radius: 25%;
+    border-radius: 43%;
     background: url(../img/Logo/logo2.png) center/cover;
 }
 
@@ -19,8 +19,6 @@ header section {
     border: 4px solid #5c5c5c;
     background: #3D3D3D;
 }
-
-
 
 .navbar-nav li {
     display: inline-block; 
@@ -37,18 +35,17 @@ nav form {
     border-radius: 5px; 
     padding: 8px 12px; 
     color: white; 
-    font-size: 18px; 
 }
 
 /* Style personnalisé pour l'icône de basculement */
 .custom-navbar-toggler-icon {
-    color: white; /
-    font-size: 24px;
+    width: 3.2rem;
+    height: 3.2rem;
 }
 
 /* Style au survol */
 .custom-navbar-toggler:hover {
-   
+   background: none;
 }
 
 form .form-control { 
@@ -57,17 +54,56 @@ form .form-control {
     background: #651616;
     border-radius: 50px 0 0 50px;
     outline: none;
-    color: #fff;
     font-size: 18px;
-    padding: 10px;
+    padding: 12px;
+}
+
+form .form-control:focus {
+    box-shadow: none;
+    background: #651616ca;
+    border: none;
+    outline: none;
 }
 
 form button {
     border: none;
+    background: none;
+    padding: 0;
+}
+
+form button i {
+    border: none;
+    padding-top: 13px;
+    color: #5C5C5C;
     background: #651616;
     border-radius: 0 50px 50px 0;
+    height: 100%;
     outline: none;
-    color: #fff;
-    font-size: 18px;
-    padding: 10px;
+    font-size: 20px;
+}
+
+form input::placeholder {
+    color: #5C5C5C;
+    font-family: "Raleway";
+    font-size: 1.2rem;
+}
+
+.icons i {
+    font-size: 30px;
+    color: #5C5C5C;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    color: #6a6a6a;
+}
+
+.icons i:first-of-type {
+    border-right: 4px solid #5c5c5c;
+    height: 83px;
+    padding-top: 26px;
+}
+
+.presentation {
+    background: url(../img/Photos/Image_homme/presentation.png) center/cover;
 }

@@ -24,7 +24,7 @@
             </div>
         </section>
         <!-- Navigation mobile  en bootstrap -->
-        <nav class="navbar navbar-expand-lg p-3">
+        <nav class="navbar navbar-expand-lg custom-navbar p-0">
             <!-- Bouton de basculement (20% de la largeur de l'écran) -->
             <button class="btn btn-primary custom-navbar-toggler navbar-toggler d-md-none col-2 p-0" type="button"
                 data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
@@ -51,19 +51,21 @@
             </div>
 
             <!-- Formulaire de recherche (visible sur les écrans moyens et plus petits) -->
-            <form class="form-inline p-4 col-md-4 col-8">
+            <form class="form-inline d-flex p-3 col-md-3 col-7">
                 <input type="text" class="form-control w-100" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 ml-auto"><i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </form>
 
-            <!-- Icônes (visible sur les écrans moyens et plus petits) -->
-            <div class="icons d-flex col-md- 2 col-2 justify-content-around">
+            <div class="icons d-flex col-md-3 col-3 ">
                 <!-- Icône utilisateur -->
                 <i class="fa-solid fa-user text-center w-50"></i>
             
                 <!-- Icône du panier d'achat -->
                 <i class="fa-solid fa-basket-shopping text-center w-50"></i>
+          
             </div>
-            
+           
         </nav>
 
 

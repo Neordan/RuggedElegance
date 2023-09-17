@@ -12,27 +12,38 @@ header section {
     background: url(../img/Logo/logo2.png) center/cover;
 }
 
-nav {
+.custom-navbar {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    border: 4px solid #5c5c5c;
     background: #3D3D3D;
 }
 
+
+
 .navbar-nav li {
-    display: inline-block; /* Afficher les éléments de la liste en ligne */
-    margin-right: 10px; /* Espacement entre les éléments */
+    display: inline-block; 
+    margin-right: 10px; 
+}
+
+nav form {
+    border-right: 4px solid #5C5C5C;
+    border-left: 4px solid #5C5C5C;
 }
 
 .custom-navbar-toggler {
-    border: none; /* Supprimer la bordure */
-    border-radius: 5px; /* Coins arrondis */
-    padding: 8px 12px; /* Espacement interne (haut/bas gauche/droite) */
-    color: white; /* Couleur du texte */
-    font-size: 18px; /* Taille de la police */
+    border: none;
+    border-radius: 5px; 
+    padding: 8px 12px; 
+    color: white; 
+    font-size: 18px; 
 }
 
 /* Style personnalisé pour l'icône de basculement */
 .custom-navbar-toggler-icon {
-    color: white; /* Couleur de l'icône */
-    font-size: 24px; /* Taille de l'icône */
+    color: white; /
+    font-size: 24px;
 }
 
 /* Style au survol */
@@ -44,9 +55,19 @@ form .form-control {
     margin: auto;
     border: none;
     background: #651616;
-    border-radius: 50px;
+    border-radius: 50px 0 0 50px;
     outline: none;
     color: #fff;
     font-size: 18px;
-    padding: 10px 0;
+    padding: 10px;
+}
+
+form button {
+    border: none;
+    background: #651616;
+    border-radius: 0 50px 50px 0;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
 }

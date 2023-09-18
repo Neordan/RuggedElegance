@@ -105,5 +105,92 @@ form input::placeholder {
 }
 
 .presentation {
+    position: relative;
     background: url(../img/Photos/Image_homme/presentation.png) center/cover;
+    height: 395px;
+}
+
+.presentation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(244, 244, 244, 0.349); 
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 85px;
+}
+
+.title h1 {
+    color: #0c0c0c;
+    font-size: 3.5rem;
+    font-family: "Oswald";
+    font-weight: 300;
+    margin: 0;
+}
+.title span {
+    font-weight: 600;
+}
+
+.title h2 {
+    color: #0c0c0c;
+    font-size: 1.8rem;
+    font-family: "Playfair display";
+    font-weight: 600;
+    margin: 0;
+    color: #651616;
+}
+
+.new {
+    background:#3D3D3D;
+}
+
+.new img {
+    width: 100%;
+    height: 100%;
+}
+
+.new-description {
+    background: #070709;
+    border-top: 5px solid #3D3D3D;
+    height: 180px;
+}
+
+.new-description h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-family: "Oswald";
+    font-weight: 500;
+    margin: 0;
+}
+
+.new-description p {
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: "Playfair Display";
+    font-weight: 300;
+    margin: 0;
+}
+
+.new-description .btn {
+    background: #651616;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: "Raleway";
+    font-weight: 300;
+    margin-top: 10px;
+    border-radius: 0;
+}
+
+.new-description .btn:hover {
+    background: #651616b9;
 }

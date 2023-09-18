@@ -15,13 +15,15 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Raleway:wght@200;300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Raleway:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&family=Raleway:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <header class="fixed">
         <section class="w-100">
             <div class="img">
             </div>
@@ -63,17 +65,32 @@
 
             <div class="icons d-flex justify-content-center align-items-center col-md-3 col-3 h-100">
                 <!-- Icône utilisateur -->
-                    <i class="fa-solid fa-user text-center w-50"></i>
+                <i class="fa-solid fa-user text-center w-50"></i>
                 <!-- Icône du panier d'achat -->
                 <i class="fa-solid fa-basket-shopping text-center w-50"></i>
             </div>
         </nav>
     </header>
-    <section class="presentation container">
-        <h1>
-            <span>Rugged</span>Elegance
-        </h1>   
-
+    <section class="presentation w-100">
+        <div class="title d-flex flex-column justify-content-around w-100 h-100">
+            <h1>
+                <span>Rugged</span>Elegance
+            </h1>
+            <h2 class="text-end">Strength and Style, Woven in Elegance</h2>
+        </div>
+    </section>
+    <section class="new p-4">
+        <img src="./assets/img/Photos/Image_homme/new.png"
+            alt="Photo d'un homme tatoué dans un fond sombre pour la nouveauté des bijoux">
+        <div class="new-description d-flex justify-content-between">
+            <div class="new-title d-flex flex-column justify-content-start p-5">
+                <h3 class="m-0">Collection Octobre 2023</h3>
+                <p class="text-center">Nouveauté bientôt</p>
+            </div>
+            <div class="new-btn d-flex justify-content-end align-items-end p-3">
+                <button class="btn btn-primary">Découvrir</button>
+            </div>
+        </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

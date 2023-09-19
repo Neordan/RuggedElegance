@@ -162,6 +162,11 @@ form input::placeholder {
     border-top: 5px solid #3D3D3D;
     height: 180px;
     padding-top: 20px;
+    width: 100%;
+}
+
+.new-title {
+    width: 70%;
 }
 
 .new-description h3 {
@@ -185,7 +190,7 @@ form input::placeholder {
     border: none;
     padding: 10px 20px;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: "Raleway";
     font-weight: 300;
     margin-top: 10px;
@@ -196,7 +201,7 @@ form input::placeholder {
     background: #651616b9;
 }
 
-.favoris h2 {
+.favoris h2, .avis h2 {
     color: #0c0c0c;
     font-size: 2rem;
     font-family: "Oswald";

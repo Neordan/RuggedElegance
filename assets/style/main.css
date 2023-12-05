@@ -1,280 +1,449 @@
+/* Header section styling */
 header section {
-    display: flex;
-    background: #000;
-    height: 425px;
+  display: flex;
+  background: #000;
+  height: 425px;
 }
 
 .img {
-    width: 70%;
-    margin: auto;
-    height: 310px;
-    border-radius: 43%;
-    background: url(../img/Logo/logo2.png) center/cover;
+  width: 70%;
+  margin: auto;
+  height: 310px;
+  border-radius: 43%;
+  background: url(../img/Logo/logo2.png) center/cover;
 }
 
+/* Custom navbar styling */
 .custom-navbar {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    border: 4px solid #5c5c5c;
-    background: #3D3D3D;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  border: 4px solid #5c5c5c;
+  background: #3d3d3d;
 }
 
 .navbar-nav li {
-    display: inline-block; 
-    margin-right: 10px; 
+  display: inline-block;
+  margin-right: 10px;
 }
 
 nav form {
-    border-right: 4px solid #5C5C5C;
-    border-left: 4px solid #5C5C5C;
+  border-right: 4px solid #5c5c5c;
+  border-left: 4px solid #5c5c5c;
 }
 
 .custom-navbar-toggler {
-    border: none;
-    border-radius: 5px; 
-    padding: 8px 12px; 
-    color: white; 
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  color: white;
 }
 
-/* Style personnalisé pour l'icône de basculement */
+/* Style personnalisé for l'icône de basculement */
 .custom-navbar-toggler-icon {
-    width: 3.2rem;
-    height: 3.2rem;
+  width: 3.2rem;
+  height: 3.2rem;
 }
 
 /* Style au survol */
 .custom-navbar-toggler:hover {
-   background: none;
+  background: none;
 }
 
-form .form-control { 
-    margin: auto;
-    border: none;
-    background: #651616;
-    border-radius: 50px 0 0 50px;
-    outline: none;
-    font-size: 18px;
-    padding: 12px;
+form .form-control {
+  margin: auto;
+  border: none;
+  background: #651616;
+  border-radius: 50px 0 0 50px;
+  outline: none;
+  font-size: 18px;
+  padding: 12px;
 }
 
 form .form-control:focus {
-    box-shadow: none;
-    background: #651616ca;
-    border: none;
-    outline: none;
+  box-shadow: none;
+  background: #651616ca;
+  border: none;
+  outline: none;
 }
 
 form button {
-    border: none;
-    background: none;
-    padding: 0;
+  border: none;
+  background: none;
+  padding: 0;
 }
 
 form button i {
-    border: none;
-    padding-top: 13px;
-    color: #5C5C5C;
-    background: #651616;
-    border-radius: 0 50px 50px 0;
-    height: 100%;
-    outline: none;
-    font-size: 20px;
+  border: none;
+  padding-top: 15px;
+  color: #5c5c5c;
+  background: #651616;
+  border-radius: 0 50px 50px 0;
+  height: 100%;
+  outline: none;
+  font-size: 20px;
 }
 
 form input::placeholder {
-    color: #5C5C5C;
-    font-family: "Raleway";
-    font-size: 1.2rem;
+  color: #5c5c5c;
+  font-family: "Raleway";
+  font-size: 1.2rem;
 }
 
 .icons i {
-    font-size: 30px;
-    color: #5C5C5C;
-    cursor: pointer;
+  font-size: 30px;
+  color: #5c5c5c;
+  cursor: pointer;
 }
 
 .icons i:hover {
-    color: #6a6a6a;
+  color: #6a6a6a;
 }
 
 .icons i:first-of-type {
-    border-right: 4px solid #5c5c5c;
-    height: 83px;
-    padding-top: 26px;
+  border-right: 4px solid #5c5c5c;
+  height: 83px;
+  padding-top: 26px;
 }
 
+/* section styling */
 .presentation {
-    position: relative;
-    background: url(../img/Photos/Image_homme/presentation.png) center/cover;
-    height: 395px;
+  position: relative;
+  background: url(../img/Photos/Image_homme/presentation.png) center/cover;
+  height: 395px;
 }
 
 .presentation::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(244, 244, 244, 0.349); 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244, 244, 244, 0.349);
 }
 
 .title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 85px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 85px;
 }
 
 .title h1 {
-    color: #0c0c0c;
-    font-size: 3.5rem;
-    font-family: "Oswald";
-    font-weight: 300;
-    margin: 0;
+  color: #0c0c0c;
+  font-size: 3.5rem;
+  font-family: "Oswald";
+  font-weight: 300;
+  margin: 0;
 }
 .title span {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .title h2 {
-    color: #0c0c0c;
-    font-size: 1.8rem;
-    font-family: "Playfair display";
-    font-weight: 600;
-    margin: 0;
-    color: #651616;
+  color: #0c0c0c;
+  font-size: 1.8rem;
+  font-family: "Playfair display";
+  font-weight: 600;
+  margin: 0;
+  color: #651616;
 }
 
+/* New section styling */
 .new {
-    background:#3D3D3D;
+  background: #3d3d3d;
 }
 
 .new img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .new-description {
-    background: #070709;
-    border-top: 5px solid #3D3D3D;
-    height: 180px;
-    padding-top: 20px;
-    width: 100%;
+  background: #070709;
+  border-top: 5px solid #3d3d3d;
+  height: 180px;
+  padding-top: 20px;
+  width: 100%;
 }
 
 .new-title {
-    width: 70%;
+  width: 70%;
+}
+
+.new-title h3 {
+  padding-top: 22px;
 }
 
 .new-description h3 {
-    color: #fff;
-    font-size: 1.4rem;
-    font-family: "Oswald";
-    font-weight: 500;
-    margin: 0;
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: "Oswald";
+  font-weight: 500;
+  margin: 0;
 }
 
 .new-description p {
-    color: #fff;
-    font-size: 1.3rem;
-    font-family: "Playfair Display";
-    font-weight: 300;
-    margin: 0;
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: "Playfair Display";
+  font-weight: 300;
+  margin: 0;
 }
 
 .new-description .btn {
-    background: #651616;
-    border: none;
-    padding: 10px 20px;
-    color: #fff;
-    font-size: 1.1rem;
-    font-family: "Raleway";
-    font-weight: 300;
-    margin-top: 10px;
-    border-radius: 0;
+  background: #651616;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: "Raleway";
+  font-weight: 300;
+  margin-top: 10px;
+  border-radius: 0;
 }
 
 .new-description .btn:hover {
-    background: #651616b9;
+  background: #651616b9;
 }
 
-.favoris h2, .avis h2 {
-    color: #0c0c0c;
-    font-size: 2rem;
-    font-family: "Oswald";
-    font-weight: 600;
-    margin-bottom: 18px;
+.new-btn .btn:hover {
+  background: #7f1a1a;
+  font-weight: 400;
+  border-radius: 2px;
+  animation-duration: 0.2s;
+}
+
+/* Favoris section styling */
+.favoris h2,
+.avis h2 {
+  color: #0c0c0c;
+  font-size: 2rem;
+  font-family: "Oswald";
+  font-weight: 600;
+  margin-bottom: 18px;
 }
 
 .favoris .cards {
-    gap: 30px;
+  gap: 30px;
 }
 
 .favoris .card {
-    border-radius: 8px;
-    border: 5px solid #651616;
+  border-radius: 8px;
+  border: 5px solid #651616;
 }
 
 .favoris .info-favorite {
-    background: #070709;
+  background: #070709;
 }
-
 .favoris h3 {
-    color: #fffafa;
-    font-size: 1.7rem;
-    font-family: "Oswald";
-    font-weight: 400;
+  color: #fffafa;
+  font-size: 1.7rem;
+  font-family: "Oswald";
+  font-weight: 400;
 }
 
 .favoris p {
-    color: #fffafa;
-    font-size: 1.5rem;
-    font-family: "Oswald";
-    font-weight: 300;
-    margin: 0;
+  color: #fffafa;
+  font-size: 1.5rem;
+  font-family: "Oswald";
+  font-weight: 300;
+  margin: 0;
 }
 
 .favoris .btn {
-    background: #651616;
-    border: none;
-    padding: 10px 20px;
-    color: #fff;
-    font-size: 1.2rem;
-    font-family: "Raleway";
-    font-weight: 300;
-    margin: -30px auto 0 auto;
-    border-radius: 0 0 8px 8px;
-    width: 40%;
+  background: #651616;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: "Raleway";
+  font-weight: 300;
+  margin: -30px auto 0 auto;
+  border-radius: 0 0 8px 8px;
+  width: 40%;
 }
 
 .favoris i {
-    font-size: 1.5rem;
-    color: #fffafa;
-    transition: all 0.3s ease-in-out;
+  font-size: 1.5rem;
+  color: #fffafa;
+  transition: all 0.3s ease-in-out;
 }
 
 .favoris .btn:hover i {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
-
+/* Carousel section styling */
 .carousel {
-    width: 100%;
-    border-top: 4px solid #3D3D3D;
-    border-bottom: 4px solid #3D3D3D;
+  width: 100%;
+  border-top: 4px solid #3d3d3d;
+  border-bottom: 4px solid #3d3d3d;
 }
 
 .carousel-item {
-    height: 300px;
+  height: 300px;
 }
 
 .avis h2 {
-    margin-left: 42px;
+  margin-left: 42px;
 }
 
+/* Page catégorie 
+ */
+
+ /* filtres */
+
+ .filter-container {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Style for dropdown buttons */
+
+.filter-btn {
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin-bottom: 10px;
+}
+/* Style for dropdown buttons */
+.dropdown-toggle {
+  background-color: #343a40; /* Dark background color for the buttons */
+  color: white;
+}
+
+/* Style for dropdown items */
+.dropdown-item {
+  background-color: black;
+  color: white;
+}
+
+ /* Style for dropdown menus */
+ .dropdown-menu {
+  width: 100%;
+  background-color: black;
+}
+
+/* Style for the search button */
+.search-btn {
+  width: 100%;
+  background-color: #007bff; /* Bootstrap primary button color */
+  color: white;
+}
+
+.checkable-li {
+  cursor: pointer;
+}
+
+/* Style to make label take up the entire space of the li */
+.checkable-li label {
+  display: block;
+  padding: 0.75rem 1.25rem; /* Adjust padding as needed */
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/* css des cards */
+
+h2 {
+  color: #0c0c0c;
+  font-size: 1.7rem;
+  font-family: "Oswald";
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card {
+  border: 3px solid #790606;
+  border-radius: 8px;
+}
+
+.card img {
+  border-radius: 5px 5px 0 0;
+  height: 270px;
+  object-fit:cover
+}
+
+.card-footer {
+  background-color: #000000;
+  color: #FAFAFF;
+}
+
+.card-footer .card-title {
+  font-family: "Playfair display";
+  font-weight: 100;
+  font-size: 1.1rem;
+  letter-spacing: 1.9px;
+}
+
+.card-footer .card-title::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 2px;
+  background-color: #fafaff;
+  margin: 4px 0 0 0;
+}
+
+/* Footer section styling */
 footer {
-    background: #3D3D3D;
+  background: #3d3d3d;
+  font-family: "Oswald";
+}
+
+footer .footer-search .input-subscribe {
+  width: 50%;
+}
+
+footer h5 {
+  color: #141414;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+footer .subscribe {
+  color: #141414;
+  font-weight: 300;
+}
+
+footer form #newsletter1 {
+  margin: auto;
+  border: none;
+  background: #5c5c5c;
+  border-radius: 50px 0 0 50px;
+  outline: none;
+  font-size: 18px;
+  padding: 10px;
+}
+
+footer form #btn-subscribe {
+  background: #5c5c5c;
+  border-radius: 0 25px 25px 0;
+}
+
+footer ul {
+  font-family: "Oswald";
+}
+
+footer .fa-magnifying-glass {
+  background-color: #5c5c5c;
+  color: #141414;
+}
+
+footer .reseau i {
+  color: #790606;
+  font-size: 35px;
+}
+
+footer p:last-child {
+  font-size: 10px;
+}
+
+footer .nav-footer ul li a:hover {
+  color: #790606;
 }

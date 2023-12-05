@@ -1,3 +1,8 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 /* Header section styling */
 header section {
   display: flex;
@@ -418,9 +423,77 @@ h2 {
 
 /* Page product  */
 
+.group-img .main-img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
 
+.seconds-img img {
+  width: 70px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
 
+.info-product h2 {
+  font-family: "Playfair display";
+  font-weight: 700;
+  font-size: 1.8rem;
+}
 
+.info-product .marque {
+  font-family: "Raleway";
+  margin-top: -2px;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.info-product .marque::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 2px;
+  background-color: #7E1B1B;
+  margin: 1px 0 0 0;
+}
+
+.info-left p {
+  font-family: "Oswald";
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.price-product .opinion-product i {
+  font-size: 0.7rem;
+}
+.price-product .opinion-product {
+  margin-top: -8px;
+}
+
+.price-product .stock-product p {
+  font-family: "Raleway";
+  color: #2BA30D;
+  border: 2px solid #2BA30D;
+  border-radius: 20px;
+  padding: 5px 8px;
+}
+
+.size-guide h3 {
+  font-family: "Oswald";
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+.size-guide h3:after {
+  content: "";
+  display: block;
+  width: 129px;
+  height: 1px;
+  background-color: #000000;
+  margin: 0;
+}
 
 /* Footer section styling */
 footer {

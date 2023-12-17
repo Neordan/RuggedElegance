@@ -544,6 +544,94 @@ h2 {
   color: #fafaff;
 }
 
+.description-product {
+  font-size: 0.8rem;
+}
+
+.description-product p {
+  font-family: "Raleway";
+  text-align: justify;
+  text-indent: 20px;
+  font-weight: 200; 
+}
+
+.description-product ul li {
+  border: none;
+}
+
+.description-product ul li p::before {
+  position: relative;
+  display: block;
+  content: "";
+  top:13px;
+  left:-19px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid #651616;
+}
+
+.customers {
+  background-color: #3D3D3D;
+}
+
+.customers h4, .similary-product h4 {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 1.8rem;
+
+}
+
+.customers h4:after, .similary-product h4:after {
+  content: "";
+  display: block;
+  width: 230px;
+  height: 2px;
+  background-color: #651616;
+  margin: 5px 0 0 0;
+}
+
+.customers-pictures img {
+  border: 1px solid #000000;
+}
+
+.policy-white {
+  color: #fafaff;
+}
+
+.card-product {
+  width: 45%;
+  border: 4px solid #651616;
+  border-radius: 8px;
+}
+.card-product img{
+  border-radius: 4px 4px 0 0;
+}
+
+.card-product .info-product {
+  background-color: #000000;
+  color: #fafaff; 
+}
+
+.card-product .info-product p:first-of-type {
+  font-family: "playfair display";
+  font-size: 1rem;
+}
+
+.card-product .info-product p:first-of-type::after {
+  content: "";
+  display: block;
+  width: 75%;
+  height: 1px;
+  background-color: #fafaff;
+  margin: 1px 0 0 0;
+}
+
+.card-product .info-product .stars-product {
+  font-size: 0.5rem;
+}
+
+
 /* Footer section styling */
 footer {
   background: #3d3d3d;

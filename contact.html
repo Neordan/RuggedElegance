@@ -71,7 +71,26 @@
             </div>
         </nav>
     </header>
-
+    <!-- formulaire de connexion en bootstrap -->
+    <div id="modalLoginForm" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Connexion</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <label for="email" class="ps-3">Email</label>
+                    <input type="text" id="email" class="form-control mb-3" placeholder="Email">
+                    <label for="password" class="ps-3">Mot de passe</label>
+                    <input type="password" id="password" class="form-control mb-3" placeholder="Mot de passe">
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary">Se connecter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <footer class="p-5">
         <section class="row">
             <div class="nav-footer d-flex">

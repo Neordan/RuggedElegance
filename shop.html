@@ -65,134 +65,47 @@
 
             <div class="icons d-flex justify-content-center align-items-center col-md-3 col-3 h-100">
                 <!-- Icône utilisateur -->
-                <i class="fa-solid fa-user text-center w-50"></i>
+                <a href="./connexion.html"><i class="fa-solid fa-user text-center w-50"></i></a>
                 <!-- Icône du panier d'achat -->
-                <i class="fa-solid fa-basket-shopping text-center w-50"></i>
+                <a href="./shop.html"><i class="fa-solid fa-basket-shopping text-center w-50"></i></a>
             </div>
         </nav>
     </header>
-    <section>
-        <!-- création de filtres pour le prix, catégorie, matière et couleur -->
 
-
-        <div class="container mx-auto my-3 filter-container">
-            <form action="" method="post">
-                <div class="row">
-                    <div class="col-md-6 col-12">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary filter-btn dropdown-toggle" type="button"
-                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                Prix
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li class="checkable-li">
-                                    <input type="checkbox" class="form-check-input" id="priceOption1" name="prices[]"
-                                        value="Less than 10">
-                                    <label class="form-check-label" for="priceOption1">Moins de 10€</label>
-                                </li>
-                                <li class="checkable-li">
-                                    <input type="checkbox" class="form-check-input" id="priceOption2" name="prices[]"
-                                        value="10 to 20">
-                                    <label class="form-check-label" for="priceOption2">10€ - 20€</label>
-                                </li>
-                                <li class="checkable-li">
-                                    <input type="checkbox" class="form-check-input" id="priceOption3" name="prices[]"
-                                        value="20 to 40">
-                                    <label class="form-check-label" for="priceOption3">20€ - 40€</label>
-                                </li>
-                                <li class="checkable-li">
-                                    <input type="checkbox" class="form-check-input" id="priceOption4" name="prices[]"
-                                        value="40 to 60">
-                                    <label class="form-check-label" for="priceOption4">40€ - 60€</label>
-                                </li>
-                                <li class="checkable-li">
-                                    <input type="checkbox" class="form-check-input" id="priceOption5" name="prices[]"
-                                        value="More than 60">
-                                    <label class="form-check-label" for="priceOption5">Plus de 60€</label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary filter-btn dropdown-toggle" type="button"
-                                id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                Catégorie
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                <li><input type="checkbox" class="form-check-input" id="categoryOption1"
-                                        name="categories[]" value="Bague"> <label class="form-check-label"
-                                        for="categoryOption1">Bague</label></li>
-                                <li><input type="checkbox" class="form-check-input" id="categoryOption2"
-                                        name="categories[]" value="Collier"> <label class="form-check-label"
-                                        for="categoryOption2">Collier</label></li>
-                                <li><input type="checkbox" class="form-check-input" id="categoryOption3"
-                                        name="categories[]" value="Bracelet"> <label class="form-check-label"
-                                        for="categoryOption3">Bracelet</label></li>
-                                <li><input type="checkbox" class="form-check-input" id="categoryOption4"
-                                        name="categories[]" value="Montre"> <label class="form-check-label"
-                                        for="categoryOption4">Montre</label></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary filter-btn dropdown-toggle" type="button"
-                                id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
-                                Matière
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                <li><input type="checkbox" class="form-check-input" id="materialOption1"
-                                        name="materials[]" value="Or"> <label class="form-check-label"
-                                        for="materialOption1">Or</label></li>
-                                <li><input type="checkbox" class="form-check-input" id="materialOption2"
-                                        name="materials[]" value="Argent"> <label class="form-check-label"
-                                        for="materialOption2">Argent</label></li>
-                                <li><input type="checkbox" class="form-check-input" id="materialOption3"
-                                        name="materials[]" value="Acier"> <label class="form-check-label"
-                                        for="materialOption3">Acier</label></li>
-                                <li><input type="checkbox" class="form-check-input" id="materialOption4"
-                                        name="materials[]" value="Cuir"> <label class="form-check-label"
-                                        for="materialOption4">Cuir</label></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary filter-btn dropdown-toggle" type="button"
-                                id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
-                                Couleur
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
-                                <li><input type="checkbox" class="form-check-input" id="colorOption1" name="colors[]"
-                                        value="Or"> <label class="form-check-label" for="colorOption1">Or</label></li>
-                                <li><input type="checkbox" class="form-check-input" id="colorOption2" name="colors[]"
-                                        value="Argent"> <label class="form-check-label"
-                                        for="colorOption2">Argent</label></li>
-                                <li><input type="checkbox" class="form-check-input" id="colorOption3" name="colors[]"
-                                        value="cuivre"> <label class="form-check-label"
-                                        for="colorOption3">Cuivre</label></li>
-                                <li><input type="checkbox" class="form-check-input" id="colorOption4" name="colors[]"
-                                        value="Noir"> <label class="form-check-label" for="colorOption4">Noir</label>
-                                </li>
-                                <li><input type="checkbox" class="form-check-input" id="colorOption5" name="colors[]"
-                                        value="Blanc"> <label class="form-check-label" for="colorOption5">Blanc</label>
-                                </li>
-                                <li><input type="checkbox" class="form-check-input" id="colorOption6" name="colors[]"
-                                        value="Bleu"> <label class="form-check-label" for="colorOption6">Bleu</label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button class="btn btn-primary search-btn" type="submit">Rechercher</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-    </section>
     <main>
+            <div>
+                <h1>Panier</h1>
+                <table id="cart">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prix U</th>
+                            <th>Quantité</th>
+                            <th>Total HT</th>
+                            <th>#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">
+                                <label for="delivery-1">Relais colis (5 €)</label>
+                                <input class="delivery-option" name="delivery" id="delivery-1" value="5" type="radio" checked>
+                            </td>
+                            <td colspan="2">
+                                <label for="delivery-2">Domicile (12 €)</label>
+                                <input class="delivery-option" name="delivery" id="delivery-2" value="12" type="radio">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td colspan="2" class="total_cart"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
 
     </main>
 

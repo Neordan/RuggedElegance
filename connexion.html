@@ -67,30 +67,79 @@
                 <!-- Icône utilisateur -->
                 <i class="fa-solid fa-user text-center w-50"></i>
                 <!-- Icône du panier d'achat -->
-                <i class="fa-solid fa-basket-shopping text-center w-50"></i>
+                <a href="./shop.html"><i class="fa-solid fa-basket-shopping text-center w-50"></i></a>
             </div>
         </nav>
     </header>
     <!-- formulaire de connexion en bootstrap -->
-    <div id="modalLoginForm" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <form>
-                    <div class="modal-header">
-                        <h4 class="modal-title">Connexion</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <label for="email" class="ps-3">Email</label>
-                    <input type="text" id="email" class="form-control mb-3" placeholder="Email">
-                    <label for="password" class="ps-3">Mot de passe</label>
-                    <input type="password" id="password" class="form-control mb-3" placeholder="Mot de passe">
-                    <div class="modal-footer d-flex justify-content-center">
-                        <button type="submit" class="btn btn-primary">Se connecter</button>
-                    </div>
-                </form>
+    <main>
+        <section id="connexion" class="m-4">
+            <h2 class="mb-4">Connectez-vous</h2>
+            <form class="d-flex flex-column align-items-center gap-4 w-75 m-auto">
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control connexion" id="email" name="email"
+                        placeholder="ex: xxx.x@gmail.com">
+                </div>
+                <div class="col-md-6">
+                    <label for="password" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control connexion" id="password" name="password"
+                        placeholder="*******">
+                </div>
+               
+                <button type="submit" class="btn col-md-6 text-center">GO !</button>
+            </form>
+        </section>
+        <!-- inscription en bootstrap -->
+        <section id="subscribe" class="m-4">
+            <div class="title-suscribe d-flex align-items-center gap-2">
+                <h2 class="">Inscrivez-vous</h2>
+                <p class="m-0">si ce n’est pas encore fait !</p>
             </div>
-        </div>
-    </div>
+            <form class="d-flex flex-column align-items-center gap-4 w-75 m-auto">
+                <div class="col-md-6">
+                    <label for="nom" class="form-label">Nom</label>
+                    <input type="text" class="form-control connexion" id="nom" name="nom" placeholder="Adam">
+                </div>
+                <div class="col-md-6">
+                    <label for="prenom" class="form-label">Prénom</label>
+                    <input type="text" class="form-control connexion" id="prenom" name="prenom"
+                        placeholder="Mélhian">
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control connexion" id="email" name="email"
+                        placeholder="xxxx.x@gmail.com">
+                </div>
+                <div class="col-md-6">
+                    <label for="password" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control connexion" id="password" name="password"
+                        placeholder="*******">
+                </div>
+                <div class="col-md-6">
+                    <label for="password" class="form-label">Confirmer le mot de passe</label>
+                    <input type="password" class="form-control connexion" id="password" name="password"
+                        placeholder="*******">
+                </div>
+                <div class="col-md-6">
+                    <label for="adresse" class="form-label">Adresse</label>
+                    <input type="text" class="form-control connexion" id="adresse" name="adresse"
+                        placeholder="Veuillez saisir votre adresse">
+                </div>
+                <div class="col-md-6">
+                    <label for="codePostal" class="form-label">Code postal</label>
+                    <input type="text" class="form-control connexion" id="codePostal" name="codePostal"
+                        placeholder="31170">
+                </div>
+                <div class="col-md-6">
+                    <label for="ville" class="form-label">Ville</label>
+                    <input type="text" class="form-control connexion" id="ville" name="ville"
+                        placeholder="Tournefeuille">
+                </div>
+                    <button type="submit" class="btn col-md-6 text-center">FINI !</button>
+            </form>
+        </section>
+    </main>
     <footer class="p-5">
         <section class="row">
             <div class="nav-footer d-flex">

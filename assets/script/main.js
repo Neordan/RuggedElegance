@@ -1,5 +1,5 @@
 function init(cart) {
-
+    new Lines(cart.products)
 }
 
 

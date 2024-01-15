@@ -6,6 +6,9 @@ class Line {
         this.product = product
         this.#createHtml()
         this.#calculTotalProduct()
+        this.#manageInfluentPriceOnChangeEvents()
+        this.#manageRemoveProductEvent()
+        this.event = new CustomEvent('change');
     }
 
     getTotal() {
@@ -43,6 +46,19 @@ class Line {
         this.tr_cart_product.querySelector('.total_price').textContent = this.product.total + '€';
         this.tr_cart_product.querySelector('.total_price').dataset.totalPrice = this.product.total;
     }
+
+      /**
+     * Gère le changement de prix dû à des changements sur certaines colonnes.
+     * */
+      #manageInfluentPriceOnChangeEvents(){
+        this.tr_cart_product.querySelectorAll('.influent-price-on-change').forEach( (element) => {
+            element.addEventListener('change', (e) => {
+                this.#calculTotalProduct();
+                this.#emitChangeEvent()
+            })
+        })
+    }
+
 
 
     /**

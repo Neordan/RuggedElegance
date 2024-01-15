@@ -1,18 +1,18 @@
 class Line {
     tr_cart_product;
-
+    event;
 
     constructor(product) {
-        this.product = product
+        this.product = product;
         this.#createHtml()
-        this.#calculTotalProduct()
-        this.#manageInfluentPriceOnChangeEvents()
-        this.#manageRemoveProductEvent()
+        this.#calculTotalProduct();
+        this.#manageInfluentPriceOnChangeEvents();
+        this.#manageRemoveProductEvent();
         this.event = new CustomEvent('change');
     }
 
     getTotal() {
-        return this.product.total
+        return this.product.total;
     }
 
     #createHtml() {
@@ -35,7 +35,7 @@ class Line {
         document.querySelector('#cart tbody').appendChild(this.tr_cart_product);
     }
 
-     /**
+    /**
      * Calcul le total d'une ligne dans le tableau
      */
     #calculTotalProduct() {
@@ -45,13 +45,14 @@ class Line {
 
         this.tr_cart_product.querySelector('.total_price').textContent = this.product.total + '€';
         this.tr_cart_product.querySelector('.total_price').dataset.totalPrice = this.product.total;
+
     }
 
-      /**
+    /**
      * Gère le changement de prix dû à des changements sur certaines colonnes.
      * */
-      #manageInfluentPriceOnChangeEvents(){
-        this.tr_cart_product.querySelectorAll('.influent-price-on-change').forEach( (element) => {
+    #manageInfluentPriceOnChangeEvents() {
+        this.tr_cart_product.querySelectorAll('.influent-price-on-change').forEach((element) => {
             element.addEventListener('change', (e) => {
                 this.#calculTotalProduct();
                 this.#emitChangeEvent()
@@ -59,22 +60,20 @@ class Line {
         })
     }
 
-       /**
+    /**
      * Gère la suppression d'une ligne via le bouton remove
      */
-       #manageRemoveProductEvent() {
+    #manageRemoveProductEvent() {
         this.tr_cart_product.querySelector('.remove').addEventListener('click', (e) => {
             this.tr_cart_product.remove();
             this.#emitChangeEvent();
         })
     }
 
-
     /**
-     * Ecouteur d'évènement sur chaque ligne
+     * Écouteur dévénement sur les lignes du paniers
      */
-    #emitChangeEvent()
-    {
+    #emitChangeEvent() {
         this.tr_cart_product.dispatchEvent(this.event);
     }
 }

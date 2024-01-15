@@ -1,8 +1,7 @@
+
 function init(cart) {
     new Lines(cart.products)
 }
-
-
 
 /**
  * Recupère en AJAX les données du panier

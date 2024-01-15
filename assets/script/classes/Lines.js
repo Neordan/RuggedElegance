@@ -1,20 +1,19 @@
 class Lines {
+    products = [];
+    lines = [];
 
-    products = []
-    lines = []
-
-    total = 0
+    total = 0;
 
     constructor(products) {
-        this.products = products
+        this.products = products;
+        this.#run();
     }
 
-      /**
+    /**
      * Calcul le total du panier
      *
      */
-    calculTotalLines()
-    {
+    calculTotalLines() {
         this.total = 0;
 
         // 1 - Calcul des lignes
@@ -28,14 +27,14 @@ class Lines {
         document.querySelector('#cart .total_cart').textContent = this.total + "€";
     }
 
-     /**
+    /**
      * Création de tous les objets Line
      */
-     #run() {
+    #run() {
         this.products.forEach((product) => {
             let new_line = new Line(product);
             new_line.tr_cart_product.addEventListener('change', () => {
-               this.calculTotalLines();
+                this.calculTotalLines();
             });
             this.lines.push(new_line);
         })

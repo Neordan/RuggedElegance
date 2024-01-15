@@ -1,0 +1,10 @@
+{
+    "products" : [
+      { "id":  1, "name": "Montre", "unit_price": 100, "quantity":  2},
+      { "id":  2, "name": "Bracelet", "unit_price": 80, "quantity":  3},
+      { "id":  3, "name": "Montre", "unit_price": 300, "quantity":  4},
+      { "id":  4, "name": "Bague", "unit_price": 40, "quantity":  5},
+      { "id":  5, "name": "Coffret", "unit_price": 60, "quantity":  1}
+    ]
+  }
+  

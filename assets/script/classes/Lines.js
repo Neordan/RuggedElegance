@@ -27,4 +27,19 @@ class Lines {
         this.total += parseFloat(document.querySelector('.delivery-option:checked').value);
         document.querySelector('#cart .total_cart').textContent = this.total + "€";
     }
+
+     /**
+     * Création de tous les objets Line
+     */
+     #run() {
+        this.products.forEach((product) => {
+            let new_line = new Line(product);
+            new_line.tr_cart_product.addEventListener('change', () => {
+               this.calculTotalLines();
+            });
+            this.lines.push(new_line);
+        })
+
+        this.calculTotalLines();
+    }
 }

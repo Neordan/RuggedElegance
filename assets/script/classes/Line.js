@@ -43,4 +43,13 @@ class Line {
         this.tr_cart_product.querySelector('.total_price').textContent = this.product.total + '€';
         this.tr_cart_product.querySelector('.total_price').dataset.totalPrice = this.product.total;
     }
+
+
+    /**
+     * Ecouteur d'évènement sur chaque ligne
+     */
+    #emitChangeEvent()
+    {
+        this.tr_cart_product.dispatchEvent(this.event);
+    }
 }

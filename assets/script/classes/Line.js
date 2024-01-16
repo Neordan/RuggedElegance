@@ -65,7 +65,6 @@ class Line {
      */
     #manageRemoveProductEvent() {
         this.tr_cart_product.querySelector('.remove').addEventListener('click', (e) => {
-            console.log("Supprimer bouton cliqué");
             this.tr_cart_product.remove();
             this.#emitChangeEvent();
 

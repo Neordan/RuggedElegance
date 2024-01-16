@@ -22,4 +22,11 @@ class Delivery {
     selectDeliveryOption(index) {
         this.selectedDeliveryIndex = index;
     }
+
+    // Méthode pour obtenir le coût total de l'option de livraison sélectionnée
+    getTotalDeliveryCost() {
+        const selectedOption = this.deliveryOptions[this.selectedDeliveryIndex];
+        // Si une option est sélectionnée, renvoie son coût, sinon renvoie 0
+        return selectedOption ? selectedOption.cost : 0;
+    }
 }

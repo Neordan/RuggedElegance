@@ -9,10 +9,12 @@ class Lines {
 
     // Enregistrement du panier dans le localStorage
     saveToLocalStorage() {
-        // Conversion du tableau lines en une représentation JSON
-        localStorage.setItem('cart', JSON.stringify(this.lines));
-    }
+        // Filtrer les lignes avec une quantité supérieure à 0 avant de sauvegarder
+        const nonZeroQuantityLines = this.lines.filter(line => line.product.quantity > 0);
 
+        localStorage.setItem('cart', JSON.stringify(nonZeroQuantityLines));
+    }
+    
     // Récupération des données du localStorage et conversion en tableau de lignes
     loadFromLocalStorage() {
         const storedLines = localStorage.getItem('cart');
@@ -26,14 +28,17 @@ class Lines {
      */
     calculTotalLines() {
         this.total = 0;
-
+    
         // 1 - Calcul des lignes
         this.lines.forEach((line) => {
-            console.log(line);
-            this.total += parseFloat(line.getTotal());
+            if (line instanceof Line) {
+                this.total += parseFloat(line.getTotal());
+            }
         });
+    
         document.querySelector('#cart .total_cart').textContent = this.total + "€";
     }
+    
 
     /**
      * Supprime une ligne du tableau lines
@@ -56,7 +61,7 @@ class Lines {
             let new_line = new Line(product);
             new_line.tr_cart_product.addEventListener('change', () => {
                 this.calculTotalLines();
-                this.saveToLocalStorage(); // Sauvegardez le panier chaque fois qu'une modification est apportée
+                this.saveToLocalStorage();
             });
     
             new_line.tr_cart_product.addEventListener('remove', () => {

@@ -13,6 +13,14 @@ class Lines {
         localStorage.setItem('cart', JSON.stringify(this.lines));
     }
 
+    // Récupération des données du localStorage et conversion en tableau de lignes
+    loadFromLocalStorage() {
+        const storedLines = localStorage.getItem('cart');
+        if (storedLines) {
+            this.lines = JSON.parse(storedLines);
+        }
+    }
+
     /**
      * Calcul le total du panier
      */

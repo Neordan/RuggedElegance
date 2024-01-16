@@ -18,4 +18,8 @@ class Delivery {
         this.deliveryOptions.push({ name, cost });
     }
 
+    // Méthode pour sélectionner une option de livraison en fonction de l'index
+    selectDeliveryOption(index) {
+        this.selectedDeliveryIndex = index;
+    }
 }

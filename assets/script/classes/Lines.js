@@ -7,6 +7,12 @@ class Lines {
         this.#run();
     }
 
+    // Enregistrement du panier dans le localStorage
+    saveToLocalStorage() {
+        // Conversion du tableau lines en une représentation JSON
+        localStorage.setItem('cart', JSON.stringify(this.lines));
+    }
+
     /**
      * Calcul le total du panier
      */
@@ -28,7 +34,7 @@ class Lines {
         const index = this.lines.indexOf(line);
         if (index !== -1) {
             this.lines.splice(index, 1);
-            this.calculTotalLines(); // Mettez à jour le total après la suppression
+            this.calculTotalLines(); 
         }
     }
 

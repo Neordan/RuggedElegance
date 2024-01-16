@@ -1,6 +1,7 @@
 
 function init(cart) {
-    new Lines(cart.products)
+    const delivery = new Delivery();
+    new Lines(cart.products, delivery);
 }
 
 /**

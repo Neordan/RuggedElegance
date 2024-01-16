@@ -50,19 +50,18 @@ class Lines {
      * Création de tous les objets Line + suppression de lignes
      */
     #run() {
-        const removeLineFromTable = (lineToRemove) => {
-            this.lines = this.lines.filter(line => line !== lineToRemove);
-            this.calculTotalLines();
-        };
+        this.loadFromLocalStorage();
     
         this.products.forEach((product) => {
             let new_line = new Line(product);
             new_line.tr_cart_product.addEventListener('change', () => {
                 this.calculTotalLines();
+                this.saveToLocalStorage(); // Sauvegardez le panier chaque fois qu'une modification est apportée
             });
     
             new_line.tr_cart_product.addEventListener('remove', () => {
-                removeLineFromTable(new_line);
+                this.removeLine(new_line);
+                this.saveToLocalStorage();
             });
     
             this.lines.push(new_line);
@@ -70,5 +69,6 @@ class Lines {
     
         this.calculTotalLines();
     }
+    
     
 }

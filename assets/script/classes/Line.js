@@ -54,10 +54,16 @@ class Line {
     #manageInfluentPriceOnChangeEvents() {
         this.tr_cart_product.querySelectorAll('.influent-price-on-change').forEach((element) => {
             element.addEventListener('change', (e) => {
+                // Empêcher les quantités négatives dans les inputs number
+                const newQuantity = parseFloat(e.target.value);
+                if (newQuantity < 0) {
+                    e.target.value = 0;
+                }
+    
                 this.#calculTotalProduct();
-                this.#emitChangeEvent()
-            })
-        })
+                this.#emitChangeEvent();
+            });
+        });
     }
 
     /**

@@ -65,10 +65,15 @@ class Line {
      */
     #manageRemoveProductEvent() {
         this.tr_cart_product.querySelector('.remove').addEventListener('click', (e) => {
+            console.log("Supprimer bouton cliqué");
             this.tr_cart_product.remove();
             this.#emitChangeEvent();
-        })
+
+            // Événement "remove" pour informer Lines de supprimer la ligne du tableau
+            this.tr_cart_product.dispatchEvent(new CustomEvent('remove'));
+        });
     }
+
 
     /**
      * Écouteur dévénement sur les lignes du paniers

@@ -742,10 +742,21 @@ img {
   font-size: 0.8rem;
 }
 
+.quantity-control {
+  border: none;
+  
+}
+
 .info-line-cart p:nth-child(4), .info-line-cart p:last-of-type{
   font-family: "Raleway";
   font-size: 0.7rem;
   margin: 5px 0 0 0;
+}
+
+.taxe {
+  font-family: "Raleway";
+  font-size: 0.6rem;
+  margin: 0;
 }
 
 

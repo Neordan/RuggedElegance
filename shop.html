@@ -101,27 +101,38 @@
                             <p class="">Taille : XS</p>
                             <p class="m-0">Couleur : Noir</p>
                             <div class="d-flex align-items-center mt-2">
-                                <input type="number" min="1">
+                                <div class="">
+                                    <button class="quantity-control" data-action="decrement"
+                                        data-product-id="${item.id}">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="quantity-control" data-action="increment"
+                                        data-product-id="${item.id}">+</button>
+                                </div>
                                 <i class="fa-solid fa-trash ms-3"></i>
                             </div>
                         </div>
                     </div>
                     <p>price</p>
                 </div>
-                <div>
-                    <label for="delivery-1">Relais colis (5 €)</label>
-                    <input class="delivery-option" name="delivery" id="delivery-1" data-index="0" type="radio"
-                        checked>
-    
-                    <label for="delivery-2">Domicile (12 €)</label>
-                    <input class="delivery-option" name="delivery" id="delivery-2" data-index="1" type="radio">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <input class="delivery-option" name="delivery" id="delivery-1" data-index="0" type="radio"
+                            checked>
+                        <label for="delivery-1">Relais colis (5 €)</label>
+                    </div>
+                    <div>
+                        <input class="delivery-option" name="delivery" id="delivery-2" data-index="1" type="radio">
+                        <label for="delivery-2">Domicile (12 €)</label>
+                    </div>
                 </div>
 
-     
-                        <td colspan="2">Total :</td>
-                        <p class="total-cart">XX,XX €</p>
-                    </tr>
-                </tfoot>
+                <div class="subtotal d-flex justify-content-center">
+                    <p class="mb-0">Total :</p>
+                    <p class="total-cart ms-3 mb-0">XX,XX €</p>
+                </div>
+                <p class="taxe d-flex justify-content-center">Taxes incluses et frais d’expédition calculés lors du
+                    paiement
+                </p>
             </div>
         </section>
 

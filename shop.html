@@ -80,43 +80,50 @@
     </header>
 
     <main>
-            <section class="m-4">
-                <div class="entete d-flex justify-content-between">
-                    <h2 class="mb-4">Votre panier</h2>
-                    <a href="./categories.html">Continuer vos achats</a>
+        <section class="m-4">
+            <div class="entete-cart d-flex justify-content-between">
+                <h2 class="mb-4">Votre panier</h2>
+                <a href="./categories.html">Continuer vos achats</a>
+            </div>
+
+            <div id="cart">
+                <div class="title-cart d-flex justify-content-between">
+                    <p class="m-0">Produit</p>
+                    <p class="m-0">Total</p>
                 </div>
-                
-                <table id="cart">
-                    <thead>
-                        <tr>
-                            <th>Nom</th>
-                            <th>Prix U</th>
-                            <th>Quantité</th>
-                            <th>Total HT</th>
-                            <th>#</th>
-                        </tr>
-                    </thead>
-                    <tbody> 
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="2">
-                                <label for="delivery-1">Relais colis (5 €)</label>
-                                <input class="delivery-option" name="delivery" id="delivery-1"  data-index="0" type="radio" checked>
-                            </td>
-                            <td colspan="2">
-                                <label for="delivery-2">Domicile (12 €)</label>
-                                <input class="delivery-option" name="delivery" id="delivery-2"  data-index="1" type="radio">
-                            </td>
-                            
-                        </tr>
-                        <tr>
-                            <td colspan="2">Total</td>
-                            <td colspan="2" class="total_cart"></td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </section>
+                <div class="body-cart d-flex justify-content-between mt-3 pb-3">
+                    <div class="d-flex align-items-start info-product-cart">
+                        <img src="./assets/img/Photos/bracelet/1.png" alt="">
+                        <div class="info-line-cart d-flex flex-column ms-3">
+                            <p class="m-0">Nom du produit</p>
+                            <p class="">Mini description</p>
+                            <p class="m-0">X,X€</p>
+                            <p class="">Taille : XS</p>
+                            <p class="m-0">Couleur : Noir</p>
+                            <div class="d-flex align-items-center mt-2">
+                                <input type="number" min="1">
+                                <i class="fa-solid fa-trash ms-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>price</p>
+                </div>
+                <div>
+                    <label for="delivery-1">Relais colis (5 €)</label>
+                    <input class="delivery-option" name="delivery" id="delivery-1" data-index="0" type="radio"
+                        checked>
+    
+                    <label for="delivery-2">Domicile (12 €)</label>
+                    <input class="delivery-option" name="delivery" id="delivery-2" data-index="1" type="radio">
+                </div>
+
+     
+                        <td colspan="2">Total :</td>
+                        <p class="total-cart">XX,XX €</p>
+                    </tr>
+                </tfoot>
+            </div>
+        </section>
 
     </main>
 

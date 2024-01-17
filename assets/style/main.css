@@ -698,6 +698,59 @@ form .connexion {
   align-items: center;
 }
 
+/* css shop  */
+
+.entete-cart a {
+  font-family: "Oswald";
+    color: #0c0c0c;
+    font-size: 1.1rem;
+}
+
+.title-cart {
+  padding: 0;
+  border-bottom: 1px solid #651616;
+  color:#651616
+}
+
+.body-cart {
+  border-bottom: 1px solid #651616;
+}
+
+.body-cart i {
+color: #3D3D3D;
+}
+
+img {
+  width: 20%;
+}
+
+.info-line-cart p:first-child {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.info-line-cart p:nth-child(2) {
+  font-family: "Raleway";
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin: -5px 0 5px 0;
+}
+
+.info-line-cart p:nth-child(3) {
+  font-family: "Oswald";
+  font-size: 0.8rem;
+}
+
+.info-line-cart p:nth-child(4), .info-line-cart p:last-of-type{
+  font-family: "Raleway";
+  font-size: 0.7rem;
+  margin: 5px 0 0 0;
+}
+
+
+
+
 /* Footer section styling */
 footer {
   background: #3d3d3d;

@@ -1,0 +1,122 @@
+[
+  {
+      "id": 1,
+      "img": "../assets/img/Photos/bagues/1.png",
+      "name": "Bague en or",
+      "category": "Bague",
+      "price": 79.99,
+      "description": "Une magnifique bague en or avec des détails exquis.",
+      "highQualityTitle": "Bague de luxe",
+      "highQualityDescription": "Faites sensation avec cette bague de luxe en or. Chaque détail est finement travaillé pour une élégance incomparable."
+  },
+  {
+      "id": 2,
+      "img": "../assets/img/Photos/bagues/2.png",
+      "name": "Bague en argent",
+      "category": "Bague",
+      "price": 59.99,
+      "description": "Une bague en argent sterling avec un design moderne.",
+      "highQualityTitle": "Bague élégante",
+      "highQualityDescription": "Ajoutez une touche d'élégance à votre collection de bijoux avec cette bague en argent sterling. Son design unique et moderne en fait un choix parfait pour toutes les occasions."
+  },
+  {
+      "id": 3,
+      "img": "../assets/img/Photos/bagues/3.png",
+      "name": "Bague en perle",
+      "category": "Bague",
+      "price": 99.99,
+      "description": "Une bague exceptionnelle avec une perle naturelle au centre.",
+      "highQualityTitle": "Bague de perle",
+      "highQualityDescription": "Optez pour la sophistication avec cette bague mettant en valeur une perle naturelle au centre. Un bijou intemporel pour votre collection."
+  },
+  {
+      "id": 4,
+      "img": "../assets/img/Photos/montres/1.png",
+      "name": "Montre élégante",
+      "category": "Montre",
+      "price": 149.99,
+      "description": "Une montre élégante en acier inoxydable avec un cadran minimaliste.",
+      "highQualityTitle": "Montre de prestige",
+      "highQualityDescription": "Affichez votre style avec cette montre de prestige en acier inoxydable. Conçue pour l'élégance et la précision, elle complétera parfaitement votre tenue."
+  },
+  {
+      "id": 5,
+      "img": "../assets/img/Photos/montres/2.png",
+      "name": "Montre sportive",
+      "category": "Montre",
+      "price": 99.99,
+      "description": "Une montre sportive avec des fonctionnalités avancées.",
+      "highQualityTitle": "Montre sport de haut niveau",
+      "highQualityDescription": "Explorez l'aventure avec cette montre sport de haut niveau. Dotée de fonctionnalités avancées, elle vous accompagnera dans toutes vos activités."
+  },
+  {
+      "id": 6,
+      "img": "../assets/img/Photos/montres/3.png",
+      "name": "Montre classique",
+      "category": "Montre",
+      "price": 129.99,
+      "description": "Une montre classique intemporelle avec un bracelet en cuir véritable.",
+      "highQualityTitle": "Montre classique premium",
+      "highQualityDescription": "Adoptez le style intemporel avec cette montre classique premium. Son bracelet en cuir véritable et son cadran élégant en font un accessoire incontournable."
+  },
+  {
+      "id": 7,
+      "img": "../assets/img/Photos/boucles/1.png",
+      "name": "Boucles d'oreilles en diamant",
+      "category": "Boucles d'oreilles",
+      "price": 199.99,
+      "description": "Des boucles d'oreilles scintillantes avec des diamants authentiques.",
+      "highQualityTitle": "Boucles d'oreilles de luxe",
+      "highQualityDescription": "Brillez de mille feux avec ces boucles d'oreilles de luxe ornées de diamants authentiques. Un ajout glamour à votre collection de bijoux."
+  },
+  {
+      "id": 8,
+      "img": "../assets/img/Photos/boucles/2.png",
+      "name": "Boucles d'oreilles pendantes",
+      "category": "Boucles d'oreilles",
+      "price": 129.99,
+      "description": "Des boucles d'oreilles pendantes élégantes pour une allure sophistiquée.",
+      "highQualityTitle": "Boucles d'oreilles raffinées",
+      "highQualityDescription": "Ajoutez une touche d'élégance à votre style avec ces boucles d'oreilles pendantes raffinées. Leur design sophistiqué attire les regards avec subtilité."
+  },
+  {
+      "id": 9,
+      "img": "../assets/img/Photos/boucles/3.png",
+      "name": "Bracelet en perles",
+      "category": "Bracelet",
+      "price": 69.99,
+      "description": "Un bracelet charmant composé de perles de qualité.",
+      "highQualityTitle": "Bracelet de perles exquis",
+      "highQualityDescription": "Exprimez votre style avec ce bracelet de perles exquis. Chaque perle est soigneusement sélectionnée pour créer un bijou qui reflète votre élégance naturelle."
+  },
+  {
+      "id": 10,
+      "img": "../assets/img/Photos/bracelet/1.png",
+      "name": "Bracelet en cuir tressé",
+      "category": "Bracelet",
+      "price": 49.99,
+      "description": "Un bracelet en cuir tressé pour un look décontracté et tendance.",
+      "highQualityTitle": "Bracelet artisanal",
+      "highQualityDescription": "Affichez votre côté décontracté avec ce bracelet en cuir tressé artisanal. Conçu pour le confort et le style, il deviendra rapidement un indispensable de votre collection."
+  },
+  {
+      "id": 11,
+      "img": "../assets/img/Photos/bracelet/2.png",
+      "name": "Collier en argent",
+      "category": "Collier",
+      "price": 89.99,
+      "description": "Un collier en argent sterling avec un pendentif élégant.",
+      "highQualityTitle": "Collier de charme",
+      "highQualityDescription": "Mettez en valeur votre beauté naturelle avec ce collier de charme en argent sterling. Son pendentif élégant ajoute une touche de sophistication à votre tenue."
+  },
+  {
+      "id": 12,
+      "img": "../assets/img/Photos/bracelet/3.png",
+      "name": "Collier en or rose",
+      "category": "Collier",
+      "price": 109.99,
+      "description": "Un collier en or rose avec une chaîne délicate.",
+      "highQualityTitle": "Collier élégant",
+      "highQualityDescription": "Optez pour l'élégance avec ce collier en or rose. Sa chaîne délicate et son design raffiné en font un choix parfait pour toutes les occasions spéciales."
+  }
+]

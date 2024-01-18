@@ -10,12 +10,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style/main.css">
-    
+
     <!-- javascript -->
-    <script src="./assets/script/main.js" defer></script>
-    <script src="./assets/script/classes/Line.js" defer></script>
-    <script src="./assets/script/classes/Lines.js" defer></script>
-    <script src="./assets/script/classes/Delivery.js" defer></script>
+    <script src="./assets/script/main.js"></script>
+    <script src="./assets/script/classes/CartItem.js" defer></script>
+    <script src="./assets/script/classes/ProductDetailsManager.js" defer></script>
+    <script src="./assets/script/classes/ProductManager.js" defer></script>
+    <script src="./assets/script/classes/ShoppingCartManager.js" defer></script>
 
     <!-- favicon  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -32,8 +33,8 @@
 <body>
     <header class="fixed">
         <section class="w-100">
-            <div class="img">
-            </div>
+            <a href="./index.html" class="img">
+            </a>
         </section>
         <!-- Navigation mobile  en bootstrap -->
         <nav class="navbar navbar-expand-lg custom-navbar p-0">
@@ -70,7 +71,7 @@
                 </button>
             </form>
 
-            <div class="icons d-flex justify-content-center align-items-center col-md-3 col-3 h-100">
+            <div class="icons d-flex justify-content-around align-items-center col-md-3 col-3 h-100">
                 <!-- Icône utilisateur -->
                 <a href="./connexion.html"><i class="fa-solid fa-user text-center w-50"></i></a>
                 <!-- Icône du panier d'achat -->
@@ -197,268 +198,20 @@
                 </div>
             </form>
         </div>
+        <nav>
+            <ul>
+                <a href="#bagues">Bagues</a>
+                <a href="#montres">Montres</a>
+                <a href="#boucles d'oreilles">Boucles d'oreilles</a>
+                <a href="#bracelets">Bracelets</a>
+                <a href="#colliers">Colliers</a>
+            </ul>
+        </nav>
 
     </section>
     <main>
-        <h2 class="px-4">Nos colliers</h2>
-        <div class="card-group mb-5 px-4">
-            <a href="./product.html" class="card">
-                <img src="./assets/img/Photos/colliers/melhian_Cree_moi_des_colliers_classes_simple_et_virile_pour_hom_401c583d-1781-4f69-9685-63de6abf0618.png"
-                    alt="">
-                <div class="card-footer">
-                    <p class="card-title">Lorem ipsum dolor</p>
-                    <p class="stars">
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </p>
-                    <p class="card-price">X€</p>
-                </div>
-            </a>
-            <a href="./product.html" class="card">
-                <img src="./assets/img/Photos/colliers/melhian_Cree_moi_des_colliers_classes_simple_et_virile_pour_hom_401c583d-1781-4f69-9685-63de6abf0618.png"
-                    alt="">
-                <div class="card-footer">
-                    <p class="card-title">Lorem ipsum dolor</p>
-                    <p class="stars">
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </p>
-                    <p class="card-price">X€</p>
-                </div>
-            </a>
-            <a href="./product.html" class="card">
-                <img src="./assets/img/Photos/colliers/melhian_Cree_moi_des_colliers_classes_simple_et_virile_pour_hom_401c583d-1781-4f69-9685-63de6abf0618.png"
-                    alt="">
-                <div class="card-footer">
-                    <p class="card-title">Lorem ipsum dolor</p>
-                    <p class="stars">
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </p>
-                    <p class="card-price">X€</p>
-                </div>
-            </a>
-            <!-- ajout d'un bouton afficher plus en bootstrap -->
-            <div class="col-12 d-flex justify-content-center mb-5">
-                <button class="btn btn-primary">Afficher plus</button>
-            </div>
-            <h2>Nos bracelets</h2>
-            <div class="card-group">
-                <a href="./product.html" class="card">
-                    <img src="./assets/img/Photos/bracelet/melhian_Cree_moi_des_bracelets_classes_simple_et_virile_pour_ho_1fc28bf8-3011-469a-bbb7-3463e7765351.png"
-                        alt="">
-                    <div class="card-footer">
-                        <p class="card-title">Lorem ipsum dolor</p>
-                        <p class="stars">
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </p>
-                        <p class="card-price">X€</p>
-                    </div>
-                </a>
-                <a href="./product.html" class="card">
-                    <img src="./assets/img/Photos/bracelet/melhian_Cree_moi_des_bracelets_classes_simple_et_virile_pour_ho_acc96ee6-e4f6-439e-be48-acae011eb293.png"
-                        alt="">
-                    <div class="card-footer">
-                        <p class="card-title">Lorem ipsum dolor</p>
-                        <p class="stars">
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </p>
-                        <p class="card-price">X€</p>
-                    </div>
-                </a>
-                <a href="./product.html" class="card">
-                    <img src="./assets/img/Photos/bracelet/melhian_Cree_moi_des_bracelets_classes_simple_et_virile_pour_ho_e250bf96-e64f-43a6-baab-2399cd0aab2e.png"
-                        alt="">
-                    <div class="card-footer">
-                        <p class="card-title">Lorem ipsum dolor</p>
-                        <p class="stars">
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </p>
-                        <p class="card-price">X€</p>
-                    </div>
-                </a>
-            </div>
-            <!-- ajout d'un bouton afficher plus en bootstrap -->
-            <div class="col-12 d-flex justify-content-center mb-5">
-                <button class="btn btn-primary">Afficher plus</button>
-            </div>
-            <h2>Nos montres</h2>
-            <div class="card-group">
-                <a href="./product.html" class="card">
-                    <img src="./assets/img/Photos/montres/melhian_Cree_moi_des_montres_classes_simple_et_virile_pour_homm_7025eaac-9649-4d16-9e2d-3b86c7497b14.png"
-                        alt="">
-                    <div class="card-footer">
-                        <p class="card-title">Lorem ipsum dolor</p>
-                        <p class="stars">
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </p>
-                        <p class="card-price">X€</p>
-                    </div>
-                </a>
-                <a href="./product.html" class="card">
-                    <img src="./assets/img/Photos/montres/melhian_Cree_moi_des_montres_classes_simple_et_virile_pour_homm_7d8e9bfa-b204-4c01-a680-efd3ec8f7391.png"
-                        alt="">
-                    <div class="card-footer">
-                        <p class="card-title">Lorem ipsum dolor</p>
-                        <p class="stars">
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </p>
-                        <p class="card-price">X€</p>
-                    </div>
-                </a>
-                <a href="./product.html" class="card">
-                    <img src="./assets/img/Photos/montres/melhian_Cree_moi_des_montres_classes_simple_et_virile_pour_homm_eb809f81-964f-4af6-b6b1-ebff2a747ea6.png"
-                        alt="">
-                    <div class="card-footer">
-                        <p class="card-title">Lorem ipsum dolor</p>
-                        <p class="stars">
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </p>
-                        <p class="card-price">X€</p>
-                    </div>
-                </a>
-            </div>
-            <!-- ajout d'un bouton afficher plus en bootstrap -->
-            <div class="col-12 d-flex justify-content-center mb-5">
-                <button class="btn btn-primary">Afficher plus</button>
-            </div>
-            <h2>Nos bagues</h2>
-            <div class="card-group">
-                <a href="./product.html" class="card">
-                    <img src="./assets/img/Photos/bagues/melhian_Cree_moi_des_images_de_bijoux_pour_homme_realiste_pour__6b149bcc-2d7c-4f7f-a67e-349c33f7bacb.png"
-                        alt="">
-                    <div class="card-footer">
-                        <p class="card-title">Lorem ipsum dolor</p>
-                        <p class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </p>
-                        <p class="card-price">X€</p>
-                    </div>
-                </a>
-                <a href="./product.html" class="card">
-                    <img src="./assets/img/Photos/bagues/melhian_Cree_moi_des_images_de_bijoux_pour_homme_realiste_pour__a861ba46-489b-4d2e-a118-7604a459f2ee.png"
-                        alt="">
-                    <div class="card-footer">
-                        <p class="card-title">Lorem ipsum dolor</p>
-                        <p class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </p>
-                        <p class="card-price">X€</p>
-                    </div>
-                </a>
-                <a href="./product.html" class="card">
-                    <img src="./assets/img/Photos/bagues/melhian_Cree_moi_des_images_de_bijoux_pour_homme_realiste_pour__124a5a34-07c3-4be5-985e-594a8ad65dbe.png"
-                        alt="">
-                    <div class="card-footer">
-                        <p class="card-title">Lorem ipsum dolor</p>
-                        <p class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </p>
-                        <p class="card-price">X€</p>
-                    </div>
-                </a>
-            </div>
-            <!-- ajout d'un bouton afficher plus en bootstrap -->
-            <div class="col-12 d-flex justify-content-center mb-5">
-                <button class="btn">Afficher plus</button>
-            </div>
-            <h2>Nos boucles d'oreilles</h2>
-            <div class="card-group">
-                <a href="./product.html" class="card">
-                    <img src="./assets/img/Photos/boucles/melhian_cree_moi_une_collection_de_piercing_et_plugs_pour_homme_164965f4-ae4c-480e-92a1-24c00f91ae54.png"
-                        alt="">
-                    <div class="card-footer">
-                        <p class="card-title">Lorem ipsum dolor</p>
-                        <p class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </p>
-                        <p class="card-price">X€</p>
-                    </div>
-                </a>
-                <a href="./product.html" class="card">
-                    <img src="./assets/img/Photos/boucles/melhian_cree_moi_une_collection_de_piercing_et_plugs_pour_homme_c3ba1e47-3a9d-49f3-b684-8554ffbc259b.png"
-                        alt="">
-                    <div class="card-footer">
-                        <p class="card-title">Lorem ipsum dolor</p>
-                        <p class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </p>
-                        <p class="card-price">X€</p>
-                    </div>
-                </a>
-                <a href="./product.html" class="card">
-                    <img src="./assets/img/Photos/boucles/melhian_cree_moi_une_image_pour_un_site_de_e-commerce_de_boucle_c075692c-1c9b-45d2-a626-222e1c56e381.png"
-                        alt="">
-                    <div class="card-footer">
-                        <p class="card-title">Lorem ipsum dolor</p>
-                        <p class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </p>
-                        <p class="card-price">X€</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- ajout d'un bouton afficher plus en bootstrap -->
-        <div class="col-12 d-flex justify-content-center mb-5">
-            <button class="btn btn-primary">Afficher plus</button>
+        <a href="./index.html">Retour</a>
+        <div id="category-list" class="card-group mb-5 px-4">
         </div>
         <footer class="p-5">
             <section class="row">

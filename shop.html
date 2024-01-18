@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="./assets/style/main.css">
 
     <!-- javascript -->
-    <script src="./assets/script/main.js" defer></script>
-    <script src="./assets/script/classes/Line.js" defer></script>
-    <script src="./assets/script/classes/Lines.js" defer></script>
-    <script src="./assets/script/classes/Delivery.js" defer></script>
-
+    <script src="./assets/script/main.js"></script>
+    <script src="./assets/script/classes/CartItem.js" defer></script>
+    <script src="./assets/script/classes/ProductDetailsManager.js" defer></script>
+    <script src="./assets/script/classes/ProductManager.js" defer></script>
+    <script src="./assets/script/classes/ShoppingCartManager.js" defer></script>
     <!-- favicon  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -32,8 +32,8 @@
 <body>
     <header class="fixed">
         <section class="w-100">
-            <div class="img">
-            </div>
+            <a href="./index.html" class="img">
+            </a>
         </section>
         <!-- Navigation mobile  en bootstrap -->
         <nav class="navbar navbar-expand-lg custom-navbar p-0">
@@ -70,7 +70,7 @@
                 </button>
             </form>
 
-            <div class="icons d-flex justify-content-center align-items-center col-md-3 col-3 h-100">
+            <div class="icons d-flex justify-content-around align-items-center col-md-3 col-3 h-100">
                 <!-- Icône utilisateur -->
                 <a href="./connexion.html"><i class="fa-solid fa-user text-center w-50"></i></a>
                 <!-- Icône du panier d'achat -->
@@ -80,61 +80,36 @@
     </header>
 
     <main>
-        <section class="m-4">
+        <div class="cart-global m-4">
+            <a href="./product.html">Retour</a>
             <div class="entete-cart d-flex justify-content-between">
                 <h2 class="mb-4">Votre panier</h2>
                 <a href="./categories.html">Continuer vos achats</a>
             </div>
 
-            <div id="cart">
-                <div class="title-cart d-flex justify-content-between">
-                    <p class="m-0">Produit</p>
-                    <p class="m-0">Total</p>
-                </div>
-                <div class="body-cart d-flex justify-content-between mt-3 pb-3">
-                    <div class="d-flex align-items-start info-product-cart">
-                        <img src="./assets/img/Photos/bracelet/1.png" alt="">
-                        <div class="info-line-cart d-flex flex-column ms-3">
-                            <p class="m-0">Nom du produit</p>
-                            <p class="">Mini description</p>
-                            <p class="m-0">X,X€</p>
-                            <p class="">Taille : XS</p>
-                            <p class="m-0">Couleur : Noir</p>
-                            <div class="d-flex align-items-center mt-2">
-                                <div class="">
-                                    <button class="quantity-control" data-action="decrement"
-                                        data-product-id="${item.id}">-</button>
-                                    <span class="quantity">1</span>
-                                    <button class="quantity-control" data-action="increment"
-                                        data-product-id="${item.id}">+</button>
-                                </div>
-                                <i class="fa-solid fa-trash ms-3"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>price</p>
-                </div>
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                    <div>
-                        <input class="delivery-option" name="delivery" id="delivery-1" data-index="0" type="radio"
-                            checked>
-                        <label for="delivery-1">Relais colis (5 €)</label>
-                    </div>
-                    <div>
-                        <input class="delivery-option" name="delivery" id="delivery-2" data-index="1" type="radio">
-                        <label for="delivery-2">Domicile (12 €)</label>
-                    </div>
-                </div>
-
-                <div class="subtotal d-flex justify-content-center">
-                    <p class="mb-0">Total :</p>
-                    <p class="total-cart ms-3 mb-0">XX,XX €</p>
-                </div>
-                <p class="taxe d-flex justify-content-center">Taxes incluses et frais d’expédition calculés lors du
-                    paiement
-                </p>
+            <div class="title-cart d-flex justify-content-between">
+                <p class="m-0">Produit</p>
+                <p class="m-0">Total</p>
             </div>
-        </section>
+            <div id="cart">
+
+            </div>
+            <div class="delivery-free text-center"></div>
+            <div class="delivery text-center">
+                <label>
+                    <input type="radio" name="delivery" value="home" checked>
+                    Livraison à domicile (10€)
+                </label>
+                <label>
+                    <input type="radio" name="delivery" value="pickup">
+                    Point relais (5€)
+                </label>
+            </div>
+            <p class="text-center subtotal m-0 mt-3" >Total: <span id="total-cart"></span></p>
+            <p class="text-center taxe">Taxes incluses et frais d’expédition calculés lors du paiement</p>
+
+            <button></button>
+        </div>
 
     </main>
 

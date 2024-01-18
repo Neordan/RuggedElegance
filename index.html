@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="./assets/style/main.css">
 
     <!-- javascript -->
-    <script src="./assets/script/main.js" defer></script>
-    <script src="./assets/script/classes/Line.js" defer></script>
-    <script src="./assets/script/classes/Lines.js" defer></script>
-    <script src="./assets/script/classes/Delivery.js" defer></script>
-
+    <script src="./assets/script/main.js"></script>
+    <script src="./assets/script/classes/CartItem.js" defer></script>
+    <script src="./assets/script/classes/ProductDetailsManager.js" defer></script>
+    <script src="./assets/script/classes/ProductManager.js" defer></script>
+    <script src="./assets/script/classes/ShoppingCartManager.js" defer></script>
     <!-- favicon  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -32,8 +32,8 @@
 <body>
     <header class="fixed">
         <section class="w-100">
-            <div class="img">
-            </div>
+            <a href="./index.html" class="img">
+            </a>
         </section>
         <!-- Navigation mobile  en bootstrap -->
         <nav class="navbar navbar-expand-lg custom-navbar p-0">
@@ -70,7 +70,7 @@
                 </button>
             </form>
 
-            <div class="icons d-flex justify-content-center align-items-center col-md-3 col-3 h-100">
+            <div class="icons d-flex justify-content-around align-items-center col-md-3 col-3 h-100">
                 <!-- Icône utilisateur -->
                 <a href="./connexion.html"><i class="fa-solid fa-user text-center w-50"></i></a>
                 <!-- Icône du panier d'achat -->

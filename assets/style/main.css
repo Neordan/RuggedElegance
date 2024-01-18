@@ -107,7 +107,6 @@ form input::placeholder {
 }
 
 .icons i:first-of-type {
-  border-right: 4px solid #5c5c5c;
   height: 83px;
   padding-top: 26px;
 }
@@ -425,10 +424,15 @@ h2 {
 /* Page product  */
 
 .group-img .main-img {
-  height: 300px;
+  width: 100%;
+  margin: auto;
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid #000000;
+}
+
+.seconds-img {
+  width: 100%;
 }
 
 .seconds-img img {
@@ -708,26 +712,32 @@ form .connexion {
 
 .title-cart {
   padding: 0;
-  border-bottom: 1px solid #651616;
-  color:#651616
+  border-bottom: 1px solid #65161650;
+  color:#65161650
 }
 
 .body-cart {
-  border-bottom: 1px solid #651616;
+  border-bottom: 1px solid #65161650;
+}
+
+.cart {
+  border-bottom: 1px solid #65161650;
 }
 
 .body-cart i {
 color: #3D3D3D;
 }
 
-img {
-  width: 20%;
+.body-cart img {
+  width: 30%;
+  max-width: 170px;
+  min-width: 110px;
 }
 
 .info-line-cart p:first-child {
   font-family: "Playfair Display";
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .info-line-cart p:nth-child(2) {
@@ -739,12 +749,27 @@ img {
 
 .info-line-cart p:nth-child(3) {
   font-family: "Oswald";
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.btn-quantity {
+  display: flex;
+  align-items: center;
+  border: 1px solid #000000a8;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.btn-quantity button {
+  
+  border-radius: 5px;
 }
 
 .quantity-control {
   border: none;
-  
+  background-color: #ffff;
+  color: #000000;
+  font-size: 1.3rem;
 }
 
 .info-line-cart p:nth-child(4), .info-line-cart p:last-of-type{
@@ -753,12 +778,17 @@ img {
   margin: 5px 0 0 0;
 }
 
+.subtotal {
+  font-family: "Oswald";
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
 .taxe {
   font-family: "Raleway";
   font-size: 0.6rem;
   margin: 0;
 }
-
 
 
 

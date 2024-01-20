@@ -1,6 +1,7 @@
 
 /**
  * Classe qui sert à la création des lignes dans le localStorage
+ * @class
  */
 class CartItem {
     constructor(id, name, price, quantity, img) {

@@ -4,6 +4,7 @@
  * @class
  */
 class CartItem {
+    
     constructor(id, name, price, quantity, img) {
         this.id = id;
         this.name = name;

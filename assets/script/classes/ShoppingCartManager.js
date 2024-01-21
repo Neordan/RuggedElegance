@@ -1,9 +1,19 @@
+/**
+ * Gestionnaire du panier d'achat.
+ * @class
+ */
 class ShoppingCartManager {
+
     constructor() {
+        // Conteneur des éléments du panier dans le DOM
         this.cartItemsContainer = document.getElementById('cart');
+        // Élément affichant le total du panier
         this.totalCart = document.getElementById('total-cart');
+        // Options de livraison disponibles
         this.deliveryOptions = document.querySelectorAll('input[name="delivery"]');
+        // Élément affichant le coût de la livraison
         this.deliveryCostDisplay = document.getElementById('delivery-cost');
+        // Liste des éléments dans le panier
         this.items = [];
 
         // Initialisation de l'événement DOMContentLoaded
@@ -12,8 +22,12 @@ class ShoppingCartManager {
         });
     }
 
+
+    /**
+     * Initialise le gestionnaire du panier.
+     * Ajoute des écouteurs d'événements et charge les éléments du panier depuis le localStorage.
+     */
     initialize() {
-        // Ajouter des écouteurs d'événements
         if (this.cartItemsContainer) {
             this.cartItemsContainer.addEventListener('click', (event) => this.handleQuantityChange(event));
             this.deliveryOptions.forEach(option => {
@@ -21,39 +35,35 @@ class ShoppingCartManager {
             });
         }
 
-        // Charger les éléments du panier depuis le localStorage
         this.items = JSON.parse(localStorage.getItem('cart')) || [];
 
-        // Mettre à jour l'affichage initial du panier
         this.updateCartDisplay();
 
-        // Exposer la fonction addToCart sur la fenêtre globale
         window.addToCart = (productId, productName, productPrice, productImg) => {
-            console.log('addToCart function called');
             const existingItem = this.items.find(item => item.id === productId);
 
             if (existingItem) {
-                console.log('Existing item found. Incrementing quantity.');
                 existingItem.quantity++;
             } else {
-                console.log('Item not found. Adding new item.');
-                const newItem = new CartItem(productId, productName, productPrice, 1, productImg); // Remplacez ces valeurs par celles appropriées
+                const newItem = new CartItem(productId, productName, productPrice, 1, productImg);
                 this.addItem(newItem);
             }
 
-            // Ajouter des logs pour voir le contenu du panier après l'ajout
-            console.log('Updated cart items:', this.items);
-
-            // Mettre à jour le localStorage
             this.saveToLocalStorage();
         };
     }
 
+    /**
+     * Enregistre les éléments du panier dans le localStorage.
+     */
     saveToLocalStorage() {
-        console.log('Saving to localStorage:', this.items);
         localStorage.setItem('cart', JSON.stringify(this.items));
     }
 
+    /**
+     * Ajoute un élément au panier.
+     * @param {CartItem} item - L'élément à ajouter.
+     */
     addItem(item) {
         const existingItem = this.items.find(i => i.id === item.id);
 
@@ -65,9 +75,14 @@ class ShoppingCartManager {
 
         this.saveToLocalStorage();
         this.updateCartDisplay();
-        console.log(`Item added: ${JSON.stringify(item)}`);
+
     }
 
+    /**
+     * Met à jour la quantité d'un élément dans le panier.
+     * @param {string} itemId - L'identifiant de l'élément.
+     * @param {number} newQuantity - La nouvelle quantité.
+     */
     updateQuantity(itemId, newQuantity) {
         this.items.forEach(item => {
             if (item.id === itemId) {
@@ -80,39 +95,49 @@ class ShoppingCartManager {
         console.log(`Quantity updated for item with ID ${itemId} to ${newQuantity}`);
     }
 
+    /**
+     * Supprime un élément du panier.
+     * @param {string} itemId - L'identifiant de l'élément à supprimer.
+     */
     removeItem(itemId) {
         this.items = this.items.filter(item => item.id !== itemId);
         this.saveToLocalStorage();
         this.updateCartDisplay();
-        console.log(`Item removed with ID ${itemId}`);
     }
 
+    /**
+     * Calcule le total du panier en fonction des éléments et de leurs quantités.
+     * @returns {number} - Le total du panier.
+     */
     calculateTotal() {
         return this.items.reduce((total, item) => total + item.price * item.quantity, 0);
     }
 
+    /**
+     * Met à jour l'affichage du panier.
+     * Affiche les éléments du panier, le total, le coût de la livraison, et les options de livraison.
+     */
     updateCartDisplay() {
-        console.log('Cart Items:', this.items);
-        console.log('Updating cart display'); // Ajoutez cette ligne
-        this.cartItemsContainer.innerHTML = '';
+        if (this.cartItemsContainer) {
+            this.cartItemsContainer.innerHTML = '';
 
-        if (this.totalCart) {
-            if (this.items.length === 0) {
-                const emptyCartMessage = document.createElement('div');
-                document.querySelector('.delivery').style.display = "none";
-                emptyCartMessage.textContent = 'Le panier est vide';
-                this.cartItemsContainer.appendChild(emptyCartMessage);
-            } else {
-                const cart = document.createElement('div');
-                cart.classList.add('title-cart', 'd-flex', 'justify-content-between');
+            if (this.totalCart) {
+                if (this.items.length === 0) {
+                    const emptyCartMessage = document.createElement('div');
+                    document.querySelector('.delivery').style.display = "none";
+                    emptyCartMessage.textContent = 'Le panier est vide';
+                    this.cartItemsContainer.appendChild(emptyCartMessage);
+                } else {
+                    const cart = document.createElement('div');
+                    cart.classList.add('title-cart', 'd-flex', 'justify-content-between');
 
-                this.items.forEach(item => {
-                    const productContainer = document.createElement('div');
-                    productContainer.classList.add('body-cart', 'd-flex', 'justify-content-between', 'mt-3', 'pb-3');
+                    this.items.forEach(item => {
+                        const productContainer = document.createElement('div');
+                        productContainer.classList.add('body-cart', 'd-flex', 'justify-content-between', 'mt-3', 'pb-3');
 
-                    const subtotal = item.price * item.quantity;
+                        const subtotal = item.price * item.quantity;
 
-                    productContainer.innerHTML = `
+                        productContainer.innerHTML = `
                         <div class="d-flex align-items-start info-product-cart w-75">
                             <img src="${item.img}" alt="${item.name}">
                             <div class="info-line-cart d-flex flex-column ms-3">
@@ -122,10 +147,10 @@ class ShoppingCartManager {
                                 <p class="">Taille : XS</p>
                                 <p class="m-0">Couleur : Noir</p>
                                 <div class="d-flex align-items-center mt-2">
-                                    <div class="btn-quantity d-flex align-items-center justify-content-between">
-                                    <button class="quantity-control" data-action="decrement" data-product-id="${item.id}">-</button>
-                                    <span class="quantity">${item.quantity}</span>
-                                    <button class="quantity-control" data-action="increment" data-product-id="${item.id}">+</button>
+                                    <div class="quantity-controls d-flex align-items-center justify-content-between w-50">
+                                        <button class="btn-quantity" data-action="decrement" data-product-id="${item.id}">-</button>
+                                        <span class="quantity">${item.quantity}</span>
+                                        <button class="btn-quantity" data-action="increment" data-product-id="${item.id}">+</button>
                                     </div>
                                     <i class="fa-solid fa-trash ms-3 remove-button" data-product-id="${item.id}"></i>
                                 </div>
@@ -134,38 +159,42 @@ class ShoppingCartManager {
                         <p>${subtotal.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' })}</p>
                         `;
 
-                    this.cartItemsContainer.appendChild(productContainer);
+                        this.cartItemsContainer.appendChild(productContainer);
 
-                    // Ajouter des écouteurs d'événements Remove une fois que les boutons sont créés
-                    this.addRemoveButtonListener(item.id);
-                });
+                        this.addRemoveButtonListener(item.id);
+                    });
 
-                this.cartItemsContainer.appendChild(cart);
+                    this.cartItemsContainer.appendChild(cart);
 
-                // Ajouter les écouteurs d'événements Remove une fois que les boutons sont créés
-                this.items.forEach(item => this.addRemoveButtonListener(item.id));
-            }
+                    this.items.forEach(item => this.addRemoveButtonListener(item.id));
+                }
 
-            // Mettre à jour l'affichage du total
-            const deliveryCost = this.updateDeliveryCost();
-            const total = this.calculateTotal() + deliveryCost;
-            if (this.totalCart) {
-                this.totalCart.textContent = total.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
+                // Mettre à jour l'affichage du total
+                const deliveryCost = this.updateDeliveryCost();
+                const total = this.calculateTotal() + deliveryCost;
+                if (this.totalCart) {
+                    this.totalCart.textContent = total.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
+                } else {
+                    console.error("L'élément avec l'ID 'total-cart' n'a pas été trouvé.");
+                }
+
+                // Mettre à jour l'affichage du coût de la livraison
+                if (this.deliveryCostDisplay) {
+                    this.deliveryCostDisplay.textContent = deliveryCost.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
+                } else {
+                    console.error("L'élément avec l'ID 'delivery-cost' n'a pas été trouvé.");
+                }
             } else {
                 console.error("L'élément avec l'ID 'total-cart' n'a pas été trouvé.");
             }
-
-            // Mettre à jour l'affichage du coût de la livraison
-            if (this.deliveryCostDisplay) {
-                this.deliveryCostDisplay.textContent = deliveryCost.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
-            } else {
-                console.error("L'élément avec l'ID 'delivery-cost' n'a pas été trouvé.");
-            }
-        } else {
-            console.error("L'élément avec l'ID 'total-cart' n'a pas été trouvé.");
         }
     }
 
+    /**
+     * Récupère l'identifiant du produit à partir d'un bouton.
+     * @param {HTMLElement} button - Le bouton contenant l'attribut data-product-id.
+     * @returns {string|null} - L'identifiant du produit ou null si non trouvé.
+     */
     getProductIdFromButton(button) {
         const productId = button.dataset.productId;
 
@@ -177,13 +206,16 @@ class ShoppingCartManager {
         return productId;
     }
 
-
-
+    /**
+     * Gère le changement de quantité d'un élément du panier.
+     * Met à jour la quantité, le localStorage et l'affichage du panier.
+     * @param {Event} event - L'événement de clic.
+     */
     handleQuantityChange(event) {
         const target = event.target;
 
         // Vérifier si le clic est sur un bouton d'ajout/suppression
-        if (target.classList.contains('quantity-control')) {
+        if (target.classList.contains('btn-quantity')) {
             const productId = this.getProductIdFromButton(target);
 
             if (productId !== null) {
@@ -203,7 +235,6 @@ class ShoppingCartManager {
                         }
                     }
 
-                    // Mettre à jour le localStorage et l'affichage du panier
                     this.saveToLocalStorage();
                     this.updateCartDisplay();
                 } else {
@@ -215,11 +246,10 @@ class ShoppingCartManager {
         }
     }
 
-
-
-
-
-
+    /**
+     * Ajoute des écouteurs d'événements Remove à tous les boutons de suppression.
+     * @param {string} productId - L'identifiant du produit.
+     */
     addRemoveButtonListener(productId) {
         const removeButtons = this.cartItemsContainer.querySelectorAll(`.remove-button[data-product-id="${productId}"]`);
 
@@ -233,14 +263,18 @@ class ShoppingCartManager {
         }
     }
 
-    // Fonction pour mettre à jour le coût de la livraison
+    /**
+     * Met à jour le coût de la livraison en fonction du total du panier.
+     * Affiche les options de livraison et retourne le coût de la livraison.
+     * @returns {number} - Le coût de la livraison.
+     */
     updateDeliveryCost() {
         const total = this.calculateTotal();
         let deliveryCost = 0;
 
-        if (total < 150) {
+        if (total < 300) {
             if (this.items.length !== 0) {
-                // Le total est inférieur à 100€, afficher les options de livraison normales
+ 
                 document.querySelectorAll('.delivery').forEach(deliveryOption => {
                     deliveryOption.style.display = 'block';
                 });
@@ -268,5 +302,4 @@ class ShoppingCartManager {
     }
 }
 
-// Créer une instance de la classe ShoppingCartManager
 const shoppingCartManager = new ShoppingCartManager();
